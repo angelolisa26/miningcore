@@ -57,6 +57,16 @@ public static class KaspaConstants
     public const int Blake2bSize256 = 32;
 }
 
+public static class NexelliaConstants
+{
+    // List of KLS prefixes: https://github.com/karlsen-network/karlsend/blob/master/util/address.go
+    public const string ChainPrefixDevnet = "nexelliadev";
+    public const string ChainPrefixSimnet = "nexelliasim";
+    public const string ChainPrefixTestnet = "nexelliatest";
+    public const string ChainPrefixMainnet = "nexellia";
+}
+
+
 public static class KarlsencoinConstants
 {
     // List of KLS prefixes: https://github.com/karlsen-network/karlsend/blob/master/util/address.go
@@ -84,4 +94,7 @@ public enum KaspaBech32Prefix
     KaspaDev,
     KaspaTest,
     KaspaSim
+        
+
+
 }

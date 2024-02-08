@@ -354,6 +354,19 @@ public class KaspaAddressUtility
         // Build address pattern based on network type and coin symbol
         switch(this.CoinSymbol)
         {
+
+           case "NXL":
+                this.stringsToBech32Prefixes = new Dictionary<string, KaspaBech32Prefix>
+                {
+                    { NexelliaConstants.ChainPrefixMainnet, KaspaBech32Prefix.KaspaMain },
+                    { NexelliaConstants.ChainPrefixDevnet, KaspaBech32Prefix.KaspaDev },
+                    { NexelliaConstants.ChainPrefixTestnet, KaspaBech32Prefix.KaspaTest },
+                    { NexelliaConstants.ChainPrefixSimnet, KaspaBech32Prefix.KaspaSim },
+                };
+                
+                break;
+
+
             case "KLS":
                 this.stringsToBech32Prefixes = new Dictionary<string, KaspaBech32Prefix>
                 {

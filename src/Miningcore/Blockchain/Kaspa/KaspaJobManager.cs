@@ -14,6 +14,7 @@ using Grpc.Core;
 using Grpc.Net.Client;
 using Miningcore.Blockchain.Kaspa.Configuration;
 using Miningcore.Blockchain.Kaspa.Custom.Karlsencoin;
+using Miningcore.Blockchain.Kaspa.Custom.Nexellia;
 using Miningcore.Blockchain.Kaspa.Custom.Pyrin;
 using NLog;
 using Miningcore.Configuration;
@@ -191,6 +192,9 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
         {
             case "KLS":
                 return new KarlsencoinJob();
+
+                case "NXL":
+                return new NexelliaJob();
 
             case "PYI":
                 if(blockHeight >= PyrinConstants.Blake3ForkHeight)
